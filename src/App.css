@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
 
+@keyframes rocket {
+  0%{
+    transform: rotate(45deg);
+   }
+   50% {
+    transform: translateX(1500px);
+   }
+
+  100% {
+  display: none;
+  } 
+}
+
+
 body {
   font-family: 'Rajdhani', cursive;
   color: #d14f4f;
@@ -76,20 +90,10 @@ body {
 
 .nasa-photo .explanation {
   color: #bbb;
-  margin-top: 5px;
+  margin: 5px auto;
+  width: 850px;
+  text-align: justify;
 }
-
-/* @media (max-width: 1280px) {
-  .nasa-photo {
-    display: block;
-  }
-
-  .nasa-photo img {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-} */
 
 .home {
   display: flex;
@@ -127,21 +131,19 @@ body {
   content: url('https://image.flaticon.com/icons/svg/610/610290.svg');
   position: absolute;
   transform: scale(2);
-  transform: rotate(-135deg);
+  transform: rotate(45deg);
   height: 70px;
   width: 70px;
-  left: 600px;
+  left: -200px;
   top: 60px; 
-  transition: 0.7s ease-in;
+  transition: 1s ease-in;
 }
 
 .home-link:hover {
   transform: translateX(50px);
 } 
 .home-link:hover::after {
-  
-  transform: rotate(-135deg);
-  transform: translateX(-2000px);
+  animation: rocket 6s ease-in-out;
 }
 .button {
   display: block;
@@ -158,4 +160,41 @@ body {
 .button:hover {
   transform: scale(1.1);
   color: #FFF;
+}
+
+@media (max-width: 900px) {
+
+  /* .link {
+    font-size: 25px;
+  }
+  .link::before {
+    transform: scale(0.06);
+    left: -30px;
+  } */
+  .nasa-photo {
+    display: block;
+  }
+
+  .nasa-photo img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .nasa-photo .explanation{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+.home-link {
+  font-size: 20px;
+}
+.home-link::before {
+  transform: scale(0.07);
+  left: -60px;
+  top: -20px;
+}
+.home-link::after {
+  left: -50px;
+}
 }
