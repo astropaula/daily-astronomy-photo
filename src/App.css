@@ -143,7 +143,7 @@ body {
   transform: translateX(50px);
 } 
 .home-link:hover::after {
-  animation: rocket 6s ease-in-out;
+  animation: rocket 6s ease-in-out forwards;
 }
 .button {
   display: block;
@@ -187,12 +187,12 @@ body {
 
 @media (max-width: 600px) {
 .home-link {
-  font-size: 20px;
+  font-size: 30px;
 }
 .home-link::before {
   transform: scale(0.07);
   left: -60px;
-  top: -20px;
+  top: -10px;
 }
 .home-link::after {
   left: -50px;
