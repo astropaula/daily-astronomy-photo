@@ -1,6 +1,6 @@
 # Daily Space Photo
 SAP application, which uses NASA API to display one astronomy photo daily. 
-![daily-space](https://user-images.githubusercontent.com/67111891/92102939-8ef2fb00-eddf-11ea-9101-7dbe78b673f8.gif)
+![daily-space1](https://user-images.githubusercontent.com/67111891/92103725-a67eb380-ede0-11ea-9373-36d15af564ba.gif)
 
 
 ## Table of content
